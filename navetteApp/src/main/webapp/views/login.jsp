@@ -2,22 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inscription</title>
+    <title>Connexion</title>
 </head>
 <body>
-<h2>Créer un compte</h2>
-<form action="inscription" method="post">
-    <label>Nom:</label>
-    <input type="text" name="nom" required /><br>
-
+<h2>Connexion</h2>
+<form action="login" method="post">
     <label>Email:</label>
     <input type="email" name="email" required /><br>
 
     <label>Mot de passe:</label>
     <input type="password" name="password" required /><br>
 
-    <button type="submit">S'inscrire</button>
+    <button type="submit">Se connecter</button>
 </form>
-<p>Déjà un compte ? <a href="login.jsp">Se connecter</a></p>
+<p>Pas encore inscrit ? <a href="inscription.jsp">Créer un compte</a></p>
 </body>
 </html>

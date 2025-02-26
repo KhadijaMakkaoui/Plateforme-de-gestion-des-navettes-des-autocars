@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Demandes des utilisateurs</title>
+    <title>Demandes des clients</title>
 </head>
 <body>
-<h2>Demandes d'abonnement</h2>
+<h2>Demandes des clients</h2>
 <table border="1">
     <tr>
         <th>Départ</th>
@@ -17,7 +17,8 @@
         <th>Heure Départ</th>
         <th>Heure Arrivée</th>
         <th>Période</th>
-        <th>Nombre d'intéressés</th>
+        <th>Intéressés</th>
+        <th>Action</th>
     </tr>
     <% for (Demande demande : demandes) { %>
     <tr>
@@ -27,6 +28,12 @@
         <td><%= demande.getHeureArrivee() %></td>
         <td><%= demande.getDateDebut() %> - <%= demande.getDateFin() %></td>
         <td><%= demande.getNombreInteresses() %></td>
+        <td>
+            <form action="creerOffre" method="post">
+                <input type="hidden" name="demandeId" value="<%= demande.getId() %>" />
+                <button type="submit">Créer une offre</button>
+            </form>
+        </td>
     </tr>
     <% } %>
 </table>
