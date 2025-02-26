@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "offres_abonnement")
-public class OffreAbonnement {
+public class OffreAbonnement extends SocieteTransport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
